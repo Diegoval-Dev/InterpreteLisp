@@ -1,11 +1,12 @@
-package Model;
+package Test;
 
 import java.util.Stack;
 
-public class Aritmetica {
-    Stack<Integer> stack = new Stack<Integer>();
+class AritmeticaTest {
 
-    public int Control(String expresion){
+    @org.junit.jupiter.api.Test
+    void control() {
+        String expresion = "(+ (+ (+ 1 1) 2) 6)";
         Stack<Integer> numeros = new Stack<>();
         Stack<String> operadores = new Stack<>();
 
@@ -48,12 +49,15 @@ public class Aritmetica {
                     break;
             }
         }
-        return numeros.pop();
+        System.out.println(numeros.pop());
+
     }
-    public String deleteParentesis(String expresion){
-        String expresionWithoutParentesis = "";
 
-
-        return expresionWithoutParentesis;
+    @org.junit.jupiter.api.Test
+    String deleteParentesis(String expresion) {
+        expresion = expresion.replace("(","");
+        expresion = expresion.replace(")","");
+        expresion = expresion.replace(" ", "");
+        return expresion;
     }
 }
