@@ -50,10 +50,4 @@ public class Aritmetica {
         }
         return numeros.pop();
     }
-    public String deleteParentesis(String expresion){
-        String expresionWithoutParentesis = "";
-
-
-        return expresionWithoutParentesis;
-    }
 }
