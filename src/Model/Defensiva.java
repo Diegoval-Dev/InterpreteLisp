@@ -2,6 +2,9 @@ package Model;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * Clase que detecta si la sintaxis esta mala
+ */
 public class Defensiva {
     private static final Pattern PATRON_EXPRESION = Pattern.compile("^\\d+(\\s*[+\\-*/]\\s*\\d+)*$");
 
