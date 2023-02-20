@@ -1,6 +1,9 @@
 package Model;
 
 import java.util.Stack;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.regex.*;
 
 
 /**
@@ -23,5 +26,18 @@ public class Defensiva {
         }
 
         return stackFun.isEmpty();
+    }
+
+    /**
+     * Expresión regular encargada de permitir solo números y operadores aritméticos
+     * donde el objeto matcherCompro comprueba que la expresion anterior coincida con las especificaciones de patron
+     * @param expresion2
+     * @return
+     */
+    public static boolean sinLetras(String expresion2) {
+
+        Pattern patron = Pattern.compile("^[0-9+\\-*/()\\s]+$");
+        Matcher matcherCompro = patron.matcher(expresion2);
+        return matcherCompro.matches();
     }
 }
