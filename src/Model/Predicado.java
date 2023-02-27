@@ -2,7 +2,7 @@ package Model;
 
 import java.util.ArrayList;
 
-public class Predicado {
+public class Predicado extends AbstractFuncion{
     public boolean Atom(String x){
         return false; //o true
     }

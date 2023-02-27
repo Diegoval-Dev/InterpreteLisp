@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7840b59f-4b94-48a3-9aee-66c3bc079002" name="Changes" comment="Intento no.2 del Unit test sobre la funcionalidad de la clase Defensiva">
+    <list default="true" id="7840b59f-4b94-48a3-9aee-66c3bc079002" name="Changes" comment="Pequeña modificación del predicado">
+      <change afterPath="$PROJECT_DIR$/src/Model/AbstractFuncion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/LispException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test/FactoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Defensiva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Defensiva.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test/DefensivaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/DefensivaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Factory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Aritmetica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Aritmetica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Defun.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Defun.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Predicado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Predicado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Quote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Quote.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/SetQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/SetQ.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -33,23 +41,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "create.test.in.the.same.root": "true",
-    "last_opened_file_path": "C:/Proyecto-1",
-    "run.code.analysis.last.selected.profile": "pProject Default"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Proyecto-1&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -58,8 +65,8 @@
       <recent name="Test" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DefensivaTest.pruebaFuncion">
-    <configuration name="AritmeticaTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.FactoryTest.knowFunction">
+    <configuration name="AritmeticaTest.control" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="InterpreteList" />
       <extension name="coverage">
         <pattern>
@@ -69,7 +76,8 @@
       </extension>
       <option name="PACKAGE_NAME" value="Test" />
       <option name="MAIN_CLASS_NAME" value="Test.AritmeticaTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="control" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -105,7 +113,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DefensivaTest.testExpresionAritmeticaInvalida" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DefensivaTest.testValidarExpresionValida" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="InterpreteList" />
       <extension name="coverage">
         <pattern>
@@ -115,13 +123,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="Test" />
       <option name="MAIN_CLASS_NAME" value="Test.DefensivaTest" />
-      <option name="METHOD_NAME" value="testExpresionAritmeticaInvalida" />
+      <option name="METHOD_NAME" value="testValidarExpresionValida" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DefensivaTest.testExpresionAritmeticaValida" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FactoryTest.knowFunction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="InterpreteList" />
       <extension name="coverage">
         <pattern>
@@ -130,8 +138,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Test" />
-      <option name="MAIN_CLASS_NAME" value="Test.DefensivaTest" />
-      <option name="METHOD_NAME" value="testExpresionAritmeticaValida" />
+      <option name="MAIN_CLASS_NAME" value="Test.FactoryTest" />
+      <option name="METHOD_NAME" value="knowFunction" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -139,11 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FactoryTest.knowFunction" />
         <item itemvalue="JUnit.DefensivaTest.pruebaFuncion" />
-        <item itemvalue="JUnit.DefensivaTest.testExpresionAritmeticaValida" />
+        <item itemvalue="JUnit.DefensivaTest.testValidarExpresionValida" />
+        <item itemvalue="JUnit.AritmeticaTest.control" />
         <item itemvalue="JUnit.DefensivaTest" />
-        <item itemvalue="JUnit.DefensivaTest.testExpresionAritmeticaInvalida" />
-        <item itemvalue="JUnit.AritmeticaTest (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -157,9 +165,7 @@
       <updated>1676145241176</updated>
       <workItem from="1676145242583" duration="6174000" />
       <workItem from="1676583403125" duration="3064000" />
-      <workItem from="1676735729251" duration="14407000" />
-      <workItem from="1676821533710" duration="631000" />
-      <workItem from="1676827576288" duration="20123000" />
+      <workItem from="1676735729251" duration="13713000" />
     </task>
     <task id="LOCAL-00001" summary="FirstCommit">
       <created>1676145316568</created>
@@ -196,42 +202,7 @@
       <option name="project" value="LOCAL" />
       <updated>1676779114254</updated>
     </task>
-    <task id="LOCAL-00006" summary="Intento no1. de verificacion de desarrollo si la sintaxis esta mala o buena">
-      <created>1676779307452</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1676779307452</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Intento no.1 del Unit test sobre la funcionalidad de la clase Defensiva">
-      <created>1676779364210</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1676779364210</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Comentarios">
-      <created>1676779464311</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1676779464311</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Intento no2. de verificacion de desarrollo si la sintaxis esta mala o buena">
-      <created>1676847841272</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1676847841272</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Intento no.2 del Unit test sobre la funcionalidad de la clase Defensiva">
-      <created>1676847856109</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1676847856109</updated>
-    </task>
-    <option name="localTasksCounter" value="11" />
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,11 +225,6 @@
     <MESSAGE value="Clase Aritmetica creada y testeada" />
     <MESSAGE value="Clases cascaron creadas" />
     <MESSAGE value="Pequeña modificación del predicado" />
-    <MESSAGE value="Intento no1. de verificacion de desarrollo si la sintaxis esta mala o buena" />
-    <MESSAGE value="Intento no.1 del Unit test sobre la funcionalidad de la clase Defensiva" />
-    <MESSAGE value="Comentarios" />
-    <MESSAGE value="Intento no2. de verificacion de desarrollo si la sintaxis esta mala o buena" />
-    <MESSAGE value="Intento no.2 del Unit test sobre la funcionalidad de la clase Defensiva" />
-    <option name="LAST_COMMIT_MESSAGE" value="Intento no.2 del Unit test sobre la funcionalidad de la clase Defensiva" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pequeña modificación del predicado" />
   </component>
 </project>

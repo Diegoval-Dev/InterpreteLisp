@@ -2,7 +2,7 @@ package Model;
 
 import java.util.Stack;
 
-public class Aritmetica {
+public class Aritmetica extends AbstractFuncion{
     Stack<Integer> stack = new Stack<Integer>();
 
     public int Control(String expresion){

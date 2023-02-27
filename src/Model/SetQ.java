@@ -1,4 +1,4 @@
 package Model;
 
-public class SetQ {
+public class SetQ extends AbstractFuncion{
 }

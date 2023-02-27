@@ -1,4 +1,4 @@
 package Model;
 
-public class Defun {
+public class Defun extends AbstractFuncion{
 }
