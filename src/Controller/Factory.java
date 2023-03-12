@@ -25,14 +25,12 @@ public class Factory{
     }
     public String KnowFunction(String line){
         String nameFunction = "";
-        String quote = ".*\\bQUOTE\\b.*";
-        String defun = ".*\\bDEFUN\\b.*";
+        String quote = ".*\\bquote\\b.*";
+        String defun = ".*\\bdefun\\b.*";
         String setq = ".*\\bsetq\\b.*";
-        String cond = ".*\\bCond\\b.*";
+        String cond = ".*\\bcond\\b.*";
 
-        if(evaluar(".*[+\\-*/].*",line)){
-            return "ARITMETICA";
-        }if(evaluar(quote,line)){
+        if(evaluar(quote,line)){
             return "QUOTE";
         }
         if(evaluar(defun,line)){
@@ -43,6 +41,9 @@ public class Factory{
         }
         if(evaluar(cond,line)){
             return "COND";
+        }
+        if(evaluar(".*[+\\-*/].*",line)){
+            return "ARITMETICA";
         }
         else{
         return nameFunction;

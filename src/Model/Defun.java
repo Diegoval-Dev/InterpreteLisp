@@ -1,43 +1,56 @@
 package Model;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import Controller.Factory;
+import Controller.Main;
+
+import java.util.*;
 
 public class Defun extends AbstractFuncion{
     private String name;
-    private List<String> args;
-    private List<Object> body;
+    private List<String> parameters;
+    private String body;
+    public Defun(){
+
+    }
+    public Defun(String name, List<String> parameters, String body) {
+        this.name = name;
+        this.parameters = parameters;
+        this.body = body;
+    }
 
     public String getName() {
         return name;
     }
 
-    public List<String> getArgs() {
-        return args;
+    public List<String> getParameters() {
+        return parameters;
     }
 
-    public List<Object> getBody() {
-        return body;
+    public Object evaluate(List<String> arguments) throws Exception {
+        for (int i=0; i<arguments.size(); i++){
+            Main.interpretar(arguments.get(i));
+        }
+        return null;
     }
+    public void defineFunction(String nombre, ArrayList<String> argumentos, String cuerpo) throws Exception {
+        // Extraer el nombre de la función y sus parámetros de la expresión DEFUN
+        String functionName = nombre;
+        ArrayList<String> parameters = argumentos;
+        String body = cuerpo;
 
-    public Object call(List<Object> arguments, Map<String, Defun> symbolTable) {
-        // Verificar que la cantidad de argumentos sea la correcta
-        if (arguments.size() != args.size()) {
-            throw new RuntimeException("Número incorrecto de argumentos para la función " + name);
-        }
-        // Crear un nuevo ámbito para la función con los argumentos
-        Map<String, Object> localScope = new HashMap<>();
-        for (int i = 0; i < args.size(); i++) {
-            localScope.put(args.get(i), arguments.get(i));
-        }
-
-        // Ejecutar el cuerpo de la función en su ámbito local
-        Object result = null;
-        for (Object expr : body) {
-            //result = LispInterpreter.eval(expr, symbolTable, localScope);
-        }
-
-        return result;
+        // Crear una instancia de DefunFunction y agregarla a la tabla de símbolos
+        Main.symbolTable.put(functionName, new Defun(functionName, parameters, body));
+    }
+    public String ejecutar(String line) throws Exception {
+        line = line.replace("defun ", "");
+        line = line.substring(1,line.length()-1);
+        String[] cadena = line.split("\\s+\\(");
+        String nombre = cadena[0].trim();
+        String argumentos = cadena[1].trim().replace(")","");
+        String[] argumentosCadena = argumentos.split(" ");
+        ArrayList<String> lista = new ArrayList<>(Arrays.asList(argumentosCadena));
+        String cuerpo = "("+cadena[2];
+        defineFunction(nombre,lista,cuerpo);
+        return "Funcion ejecutada";
     }
 }
