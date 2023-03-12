@@ -4,6 +4,10 @@ public class SetQ extends AbstractFuncion{
     private String name;
     private String value;
 
+    public SetQ() {
+
+    }
+
     public SetQ(String name, String value) {
         this.name = name;
         this.value = value;
