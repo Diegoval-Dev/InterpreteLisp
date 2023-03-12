@@ -50,4 +50,7 @@ public class Aritmetica extends AbstractFuncion{
         }
         return numeros.pop();
     }
+    public String ejecutar(String line){
+        return (String.valueOf(Control(line)));
+    }
 }
