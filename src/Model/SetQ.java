@@ -1,34 +1,15 @@
 package Model;
 
+import Controller.Main;
+
 public class SetQ extends AbstractFuncion{
-    private String name;
-    private String value;
 
-    public SetQ() {
-
-    }
-
-    public SetQ(String name, String value) {
-        this.name = name;
-        this.value = value;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getValue() {
-        return value;
-    }
-
-    public void setValue(String value) {
-        this.value = value;
-    }
     public String ejecutar(String line) {
-        return null;
+        line = line.replace("(", "");
+        line = line.replace(")","");
+        line = line.replace("setq ","");
+        String[] cadena = line.split(" ");
+        Main.localsVariables.put(cadena[0].trim(),cadena[1].trim());
+        return "Variable creada con el nombre de: "+cadena[0].trim()+" con el valor de: "+ cadena[1].trim();
     }
 }

@@ -1,21 +1,20 @@
 package Controller;
 
-import Model.AbstractFuncion;
-import Model.Defensiva;
-import Model.LispException;
-import Model.SetQ;
+import Model.*;
 import View.UI;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Main {
     static UI ui = new UI();
     static Defensiva defensiva = new Defensiva();
     static Factory factory = new Factory();
-    static ArrayList<SetQ> localsVariables= new ArrayList<>();
+    public static Map<String, Object> localsVariables= new HashMap<>();
     public static void main(String[] args) throws Exception {
         System.out.println("Interprete LISP");
-        String f = "(+ 2 2)";
+        String f = "(setq xx 22)";
         AbstractFuncion funcion = execute(f);
         assert funcion != null;
         System.out.println(funcion.ejecutar(f));
