@@ -30,7 +30,7 @@ public class Factory{
         String setq = ".*\\bsetq\\b.*";
         String cond = ".*\\bCond\\b.*";
 
-        if(evaluar("",line)){
+        if(evaluar(".*[+\\-*/].*",line)){
             return "ARITMETICA";
         }if(evaluar(quote,line)){
             return "QUOTE";

@@ -28,4 +28,7 @@ public class SetQ extends AbstractFuncion{
     public void setValue(String value) {
         this.value = value;
     }
+    public String ejecutar(String line) {
+        return null;
+    }
 }

@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class MainTest {
     public static void main(String[] args) throws Exception {
         System.out.println("Interprete LISP");
-        String f = "(+ (* 2 5) 2)";
+        String f = "(+ (* 2 5) 4)";
         AbstractFuncion funcion = execute(f);
         assert funcion != null;
         System.out.println(funcion.ejecutar(f));

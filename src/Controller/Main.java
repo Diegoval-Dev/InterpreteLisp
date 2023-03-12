@@ -3,12 +3,16 @@ package Controller;
 import Model.AbstractFuncion;
 import Model.Defensiva;
 import Model.LispException;
+import Model.SetQ;
 import View.UI;
+
+import java.util.ArrayList;
 
 public class Main {
     static UI ui = new UI();
     static Defensiva defensiva = new Defensiva();
     static Factory factory = new Factory();
+    static ArrayList<SetQ> localsVariables= new ArrayList<>();
     public static void main(String[] args) throws Exception {
         System.out.println("Interprete LISP");
         String f = "(+ 2 2)";

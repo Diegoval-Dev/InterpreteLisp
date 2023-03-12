@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Quote extends AbstractFuncion{
     public ArrayList<String> text(String t){
-        t = t.substring(6,t.length()-1);
+        t = t.substring(7,t.length()-1);
         t = t.replace("(","");
         t = t.replace(")","");
         ArrayList<String> arrT = new ArrayList<>();
@@ -13,5 +13,9 @@ public class Quote extends AbstractFuncion{
             arrT.add(caracter);
         }
         return arrT;
+    }
+    public String ejecutar(String line) {
+        String text = text(line).toString();
+        return text;
     }
 }
