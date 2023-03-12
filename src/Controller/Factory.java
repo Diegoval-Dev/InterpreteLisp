@@ -13,6 +13,7 @@ public class Factory{
         String nameFunction = "";
         String quote = ".*\\bQUOTE\\b.*";
         String defun = ".*\\bDEFUN\\b.*";
+        String setq = ".*\\bSetQ\\b.*";
 
         if(evaluar("",line)){
             return "ARITMETICA";
@@ -21,6 +22,9 @@ public class Factory{
         }
         if(evaluar(defun,line)){
             return "DEFUN";
+        }
+        if(evaluar(setq, line)){
+            return "SETQ";
         }
 
 

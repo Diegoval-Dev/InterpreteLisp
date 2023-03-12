@@ -35,7 +35,7 @@ public class Defun extends AbstractFuncion{
         // Ejecutar el cuerpo de la función en su ámbito local
         Object result = null;
         for (Object expr : body) {
-            result = LispInterpreter.eval(expr, symbolTable, localScope);
+            //result = LispInterpreter.eval(expr, symbolTable, localScope);
         }
 
         return result;
