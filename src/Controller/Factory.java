@@ -11,9 +11,16 @@ public class Factory{
     }
     public String KnowFunction(String line){
         String nameFunction = "";
+        String quote = ".*\\bQUOTE\\b.*";
+        String defun = ".*\\bDEFUN\\b.*";
 
         if(evaluar("",line)){
-
+            return "ARITMETICA";
+        }if(evaluar(quote,line)){
+            return "QUOTE";
+        }
+        if(evaluar(defun,line)){
+            return "DEFUN";
         }
 
 
