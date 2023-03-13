@@ -16,17 +16,19 @@ public class Main {
     public static Map<String, Defun> symbolTable = new HashMap<>();
     public static void main(String[] args) throws Exception {
         ArrayList<String> lineas= new ArrayList<>();
-        lineas.add("(defun doble (x y) (* 1 2))");
-        lineas.add("(doble)");
-        for (String line: lineas) {
-            interpretar(line);
-        }
-    }
-    public static ArrayList<AbstractFuncion> interpretar(ArrayList<String> line) throws Exception {
+        lineas.add("(defun sum (a b) (+ a b)");
+        lineas.add("(sum 4 5)");
         System.out.println("Interprete LISP");
-        AbstractFuncion funcion = execute(line);
-        assert funcion != null;
-        System.out.println(funcion.ejecutar(line));
+        interpretar(lineas);
+        System.out.println("Se termino");
+    }
+    public static ArrayList<AbstractFuncion> interpretar(ArrayList<String> lineas) throws Exception {
+        for (int i = 0; i<lineas.size(); i++) {
+            AbstractFuncion funcion = execute(lineas.get(i));
+            assert funcion != null;
+            System.out.println(funcion.ejecutar(lineas.get(i)));
+        }
+
         return null;
     }
     public static AbstractFuncion execute(String line) throws Exception {

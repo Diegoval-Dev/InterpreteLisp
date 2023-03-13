@@ -2,8 +2,13 @@ package Controller;
 
 import Model.*;
 
+import javax.swing.*;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import static Controller.Main.symbolTable;
 
 public class Factory{
     public AbstractFuncion execute(String line) throws Exception{
@@ -20,8 +25,18 @@ public class Factory{
             case "COND":
                 return new Cond();
             default:
-                throw new LispException("FUNCION NO RECONOCIDA, REVISE SU SYNTAXIS");
+                String nameOther = line.trim().replace("(","").replace(")","");
+                String[] funcion = nameOther.split(" ");
+                ArrayList<String> arr = new ArrayList<>(Arrays.asList(funcion));
+
+                String nombreFuncion = arr.remove(0);
+                ArrayList<String> params  = arr;
+
+                Defun def = symbolTable.get(nombreFuncion);
+                def.ejecutarItself(def,params);
+
         }
+        return null;
     }
     public String KnowFunction(String line){
         String nameFunction = "";

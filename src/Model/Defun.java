@@ -1,6 +1,5 @@
 package Model;
 
-import Controller.Factory;
 import Controller.Main;
 
 import java.util.*;
@@ -22,16 +21,18 @@ public class Defun extends AbstractFuncion{
         return name;
     }
 
+    public String getBody() {
+        return body;
+    }
+
+    public void setBody(String body) {
+        this.body = body;
+    }
+
     public List<String> getParameters() {
         return parameters;
     }
 
-    public Object evaluate(List<String> arguments) throws Exception {
-        for (int i=0; i<arguments.size(); i++){
-            Main.interpretar(arguments.get(i));
-        }
-        return null;
-    }
     public void defineFunction(String nombre, ArrayList<String> argumentos, String cuerpo) throws Exception {
         // Extraer el nombre de la función y sus parámetros de la expresión DEFUN
         String functionName = nombre;
@@ -51,6 +52,16 @@ public class Defun extends AbstractFuncion{
         ArrayList<String> lista = new ArrayList<>(Arrays.asList(argumentosCadena));
         String cuerpo = "("+cadena[2];
         defineFunction(nombre,lista,cuerpo);
-        return "Funcion ejecutada";
+        return "Funcion creada";
+    }
+    public void ejecutarItself(Defun def, ArrayList<String> params) throws Exception {
+        String correctLine = def.body;
+        for(int i=0; i<def.parameters.size(); i++){
+            correctLine = correctLine.replace(def.parameters.get(i),params.get(i));
+        }
+        ArrayList<String> s = new ArrayList<>();
+        s.add(correctLine);
+        System.out.println(correctLine);
+        Main.interpretar(s);
     }
 }
