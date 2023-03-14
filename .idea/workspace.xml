@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7840b59f-4b94-48a3-9aee-66c3bc079002" name="Changes" comment="ya medio funciona defun, pero 1, no usa los argumentos obtenidos, 2 no se manda a llamar en un momento dado">
+    <list default="true" id="7840b59f-4b94-48a3-9aee-66c3bc079002" name="Changes" comment="Inteno no.1 no terminado del unit test sobre expresiones regulares">
+      <change afterPath="$PROJECT_DIR$/src/Test/CondTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Factory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Defun.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Defun.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Cond.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Cond.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +60,7 @@
       <recent name="Test" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.DefensivaTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Controller.Main" />
       <module name="InterpreteList" />
@@ -88,7 +87,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AritmeticaTest.control" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CondTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="InterpreteList" />
       <extension name="coverage">
         <pattern>
@@ -97,14 +96,29 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Test" />
-      <option name="MAIN_CLASS_NAME" value="Test.AritmeticaTest" />
-      <option name="METHOD_NAME" value="control" />
+      <option name="MAIN_CLASS_NAME" value="Test.CondTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CondTest.testCondWithNoMatchingCondition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="InterpreteList" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Test" />
+      <option name="MAIN_CLASS_NAME" value="Test.CondTest" />
+      <option name="METHOD_NAME" value="testCondWithNoMatchingCondition" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PredicadoTest.atom" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DefensivaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="InterpreteList" />
       <extension name="coverage">
         <pattern>
@@ -113,36 +127,19 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Test" />
-      <option name="MAIN_CLASS_NAME" value="Test.PredicadoTest" />
-      <option name="METHOD_NAME" value="atom" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="QuoteTest.text" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="InterpreteList" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Test" />
-      <option name="MAIN_CLASS_NAME" value="Test.QuoteTest" />
-      <option name="METHOD_NAME" value="text" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="Test.DefensivaTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.DefensivaTest" />
+        <item itemvalue="JUnit.CondTest" />
+        <item itemvalue="JUnit.CondTest.testCondWithNoMatchingCondition" />
         <item itemvalue="Application.MainTest" />
-        <item itemvalue="JUnit.PredicadoTest.atom" />
-        <item itemvalue="JUnit.QuoteTest.text" />
-        <item itemvalue="JUnit.AritmeticaTest.control" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -158,7 +155,7 @@
       <workItem from="1676583403125" duration="3064000" />
       <workItem from="1676735729251" duration="13713000" />
       <workItem from="1677865577585" duration="432000" />
-      <workItem from="1678637156231" duration="18255000" />
+      <workItem from="1678637156231" duration="9922000" />
     </task>
     <task id="LOCAL-00001" summary="FirstCommit">
       <created>1676145316568</created>
@@ -244,21 +241,7 @@
       <option name="project" value="LOCAL" />
       <updated>1678644532203</updated>
     </task>
-    <task id="LOCAL-00013" summary="Funcion setq creada, almacenara las variables en un mapa del main">
-      <created>1678650111804</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1678650111804</updated>
-    </task>
-    <task id="LOCAL-00014" summary="ya medio funciona defun, pero 1, no usa los argumentos obtenidos, 2 no se manda a llamar en un momento dado">
-      <created>1678661763302</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1678661763302</updated>
-    </task>
-    <option name="localTasksCounter" value="15" />
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,29 +271,6 @@
     <MESSAGE value="Factory terminado" />
     <MESSAGE value="Funcion Aritmetica FUNCIONA AL 100" />
     <MESSAGE value="Funcion quote Funciona al 100" />
-    <MESSAGE value="Funcion setq creada, almacenara las variables en un mapa del main" />
-    <MESSAGE value="ya medio funciona defun, pero 1, no usa los argumentos obtenidos, 2 no se manda a llamar en un momento dado" />
-    <option name="LAST_COMMIT_MESSAGE" value="ya medio funciona defun, pero 1, no usa los argumentos obtenidos, 2 no se manda a llamar en un momento dado" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Controller/Factory.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Model/Defun.java</url>
-          <line>54</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Controller/Main.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <option name="LAST_COMMIT_MESSAGE" value="Funcion quote Funciona al 100" />
   </component>
 </project>
