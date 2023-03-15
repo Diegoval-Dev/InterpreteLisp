@@ -5,22 +5,28 @@ import java.lang.Object;
 
 /**
  * Referencia de: http://arantxa.ii.uam.es/~rcobos/teaching/esp/ia/lisp0.pdf
+ * Referencia de: https://www.manualweb.net/java/operadores-condicionales-java/
  */
 
 public class Cond extends AbstractFuncion{
-    public static Object cond(List<List<Object>> clauses) {
-        for (List<Object> clause : clauses) {
-            Object condition = clause.get(0);
-            Object result = clause.get(1);
+    /**
+     *
+     * @param casos representacion de una lista de clausulas
+     * @return Si ningun caso cumple su condicion, la funcion retorna null
+     */
+    public static Object cond(List<List<Object>> casos) {
+        for (List<Object> clause : casos) {
+            Object condn = clause.get(0);
+            Object resul = clause.get(1);
 
-            if (condition == null) {
-                return result;
-            } else if (condition instanceof Boolean && (Boolean) condition) {
-                return result;
-            } else if (condition instanceof Predicate<?> && ((Predicate<?>) condition).test(null)) {
-                return result;
-            } else if (condition.equals("T")) {
-                return result;
+            if (condn == null) {
+                return resul;
+            } else if (condn instanceof Boolean && (Boolean) condn) {
+                return resul;
+            } else if (condn instanceof Predicate<?> && ((Predicate<?>) condn).test(null)) {
+                return resul;
+            } else if (condn.equals("T")) {
+                return resul;
             }
         }
         return null;
