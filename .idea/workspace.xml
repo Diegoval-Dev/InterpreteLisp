@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7840b59f-4b94-48a3-9aee-66c3bc079002" name="Changes" comment="comentarios">
+    <list default="true" id="7840b59f-4b94-48a3-9aee-66c3bc079002" name="Changes" comment="CondTest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Cond.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Cond.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Test/CondTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/CondTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -162,7 +161,7 @@
       <workItem from="1676735729251" duration="13713000" />
       <workItem from="1677865577585" duration="432000" />
       <workItem from="1678637156231" duration="9922000" />
-      <workItem from="1678924658240" duration="10245000" />
+      <workItem from="1678924658240" duration="12433000" />
     </task>
     <task id="LOCAL-00001" summary="FirstCommit">
       <created>1676145316568</created>
@@ -269,7 +268,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678849492052</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Arreglo de listas en Cond">
+      <created>1678935904454</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1678935904454</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Mejora en CondTest">
+      <created>1678935924028</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1678935924028</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,6 +315,8 @@
     <MESSAGE value="Desarrollo de Cond" />
     <MESSAGE value="Intento del CondTest" />
     <MESSAGE value="comentarios" />
-    <option name="LAST_COMMIT_MESSAGE" value="comentarios" />
+    <MESSAGE value="Arreglo de listas en Cond" />
+    <MESSAGE value="Mejora en CondTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mejora en CondTest" />
   </component>
 </project>
