@@ -1,24 +1,20 @@
 package Test;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import org.junit.Assert;
 import org.junit.Test;
 import Model.Cond;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CondTest {
 
     @Test
-    public void testCond() {
-        List<List<Object>> casos = new ArrayList<List<Object>>();
+    public void TestCond() {
+        Object[] lista = {
+                new Object[] {false, 10},
+                new Object[] {2 == 2, 20},
+                new Object[] {3 < 2, 30},
+                new Object[] {"default", 40}
+        };
 
-        casos.add(Arrays.asList(">", 5, 3));
-        casos.add(Arrays.asList("=", 5, 3));
-        casos.add(Arrays.asList("T", "hello"));
-
-        Object result = Cond.cond(casos);
-        Assert.assertEquals("hello", result);
+        assertEquals(20, Cond.cond(lista));
     }
-
-
 }
