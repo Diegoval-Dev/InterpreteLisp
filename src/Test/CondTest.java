@@ -1,37 +1,34 @@
 package Test;
+import org.junit.Assert;
 import org.junit.Test;
 import Model.Cond;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CondTest {
 
     @Test
-    public void testCondTrue() {
-        Object[] lista = {
-                new Object[] {true, 100},
-                new Object[] {5 < 3, 200},
-                new Object[] {7 == 7, 300},
-                new Object[] {"default", 400}
-        };
+    public void testCond() {
+        String resultado = Cond.cond(">", 5, 3, "mayor", "menor");
+        Assert.assertEquals("mayor", resultado);
 
-        assertEquals(100, Cond.cond(lista));
-        System.out.println("Test Cond True: "+ Cond.cond(lista));
+        resultado = Cond.cond("<", 5, 3, "mayor", "menor");
+        Assert.assertEquals("menor", resultado);
+
+        resultado = Cond.cond("=", 5, 3, "mayor", "menor");
+        Assert.assertEquals("menor", resultado);
+
+        resultado = Cond.cond(">=", 5, 5, "mayor", "menor");
+        Assert.assertEquals("mayor", resultado);
+
+        resultado = Cond.cond("<=", 5, 5, "mayor", "menor");
+        Assert.assertEquals("mayor", resultado);
+
+        resultado = Cond.cond("invalido", 5, 3, "mayor", "menor");
+        Assert.assertEquals("Error: comparación inválida", resultado);
     }
-
-
-    @Test
-    public void TestCondFalse() {
-        Object[] lista = {
-                new Object[] {false, 10},
-                new Object[] {2 == 2, 20},
-                new Object[] {3 < 2, 30},
-                new Object[] {"default", 40}
-        };
-
-        assertEquals(20, Cond.cond(lista));
-        System.out.println("Test Cond False: "+ Cond.cond(lista));
-    }
-
 
 }

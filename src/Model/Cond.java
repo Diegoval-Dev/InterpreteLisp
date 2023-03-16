@@ -12,18 +12,49 @@ import java.lang.Object;
 public class Cond extends AbstractFuncion{
 
     /**
-     * El método cond recorre la lista de condiciones y expresiones en el arreglo lista, evaluando cada una de las condiciones
-     * @param lista lista de condiciones y sus respectivas expresiones
-     * @return si no hay condicones true retorna null
+     *
+     * @param comparacion compara la operacion aritmetica
+     * @param a entero representativo del primer valor en comparar
+     * @param b entero representativo del segundo valor en comparar
+     * @param mayor devuelve si a es mayor que b
+     * @param menor devuelve si a es menor que b
+     * @return retorna un objeto String
      */
-    public static Object cond(Object[] lista) {
-        for (int i = 0; i < lista.length; i++) {
-            Object[] listN = (Object[]) lista[i];
-            if (listN[0].equals("t") || (Boolean) listN[0]) {
-                return listN[1];
-            }
+    public static String cond(String comparacion, int a, int b, String mayor, String menor) {
+        switch(comparacion) {
+            case ">":
+                if (a > b) {
+                    return mayor;
+                } else {
+                    return menor;
+                }
+            case "<":
+                if (a < b) {
+                    return mayor;
+                } else {
+                    return menor;
+                }
+            case ">=":
+                if (a >= b) {
+                    return mayor;
+                } else {
+                    return menor;
+                }
+            case "<=":
+                if (a <= b) {
+                    return mayor;
+                } else {
+                    return menor;
+                }
+            case "=":
+                if (a == b) {
+                    return mayor;
+                } else {
+                    return menor;
+                }
+            default:
+                return "Error";
         }
-        return null;
     }
 
 }

@@ -6,6 +6,7 @@ import View.UI;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 public class Main {
 
@@ -14,13 +15,25 @@ public class Main {
     static Factory factory = new Factory();
     public static Map<String, Object> localsVariables= new HashMap<>();
     public static Map<String, Defun> symbolTable = new HashMap<>();
+
     public static void main(String[] args) throws Exception {
+        Scanner scanner = new Scanner(System.in);
         ArrayList<String> lineas= new ArrayList<>();
-        lineas.add("(defun sum (a b) (+ a b)");
+        System.out.println("Ingrese las líneas de código (ingrese una línea vacía para finalizar):");
+        while (true) {
+            String linea = scanner.nextLine();
+            if (linea.isEmpty()) {
+                break;
+            }
+            lineas.add(linea);
+        }
+        scanner.close();
+        lineas.add("(defun sum (a b) (+ a b))");
         lineas.add("(sum 4 5)");
         System.out.println("Interprete LISP");
         interpretar(lineas);
         System.out.println("Se termino");
+
     }
     public static ArrayList<AbstractFuncion> interpretar(ArrayList<String> lineas) throws Exception {
         for (int i = 0; i<lineas.size(); i++) {
@@ -41,4 +54,5 @@ public class Main {
         }
         return null;
     }
+
 }
