@@ -31,7 +31,6 @@ public class Main {
         System.out.println("Interprete LISP");
         interpretar(lineas);
         System.out.println("Se termino");
-
     }
     public static ArrayList<AbstractFuncion> interpretar(ArrayList<String> lineas) throws Exception {
         try{
