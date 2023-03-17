@@ -24,6 +24,16 @@ public class Factory{
                 return new SetQ();
             case "COND":
                 return new Cond();
+            case "ATOM":
+                return new Atom();
+            case "LIST":
+                return new ListF();
+            case "EQUALS":
+                return new Equals();
+            case "MENOR":
+                return new Menor();
+            case "MAYOR":
+                return new Mayor();
             default:
                 String nameOther = line.trim().replace("(","").replace(")","");
                 String[] funcion = nameOther.split(" ");
@@ -44,6 +54,11 @@ public class Factory{
         String defun = ".*\\bdefun\\b.*";
         String setq = ".*\\bsetq\\b.*";
         String cond = ".*\\bcond\\b.*";
+        String atom = ".*\\batom\\b.*";
+        String list = ".*\\blist\\b.*";
+        String equals = ".*\\bequals\\b.*";
+        String menor = ".*\\bmenor\\b.*";
+        String mayor = ".*\\bmayor\\b.*";
 
         if(evaluar(quote,line)){
             return "QUOTE";
@@ -56,6 +71,21 @@ public class Factory{
         }
         if(evaluar(cond,line)){
             return "COND";
+        }
+        if(evaluar(atom,line)){
+            return "ATOM";
+        }
+        if(evaluar(list,line)){
+            return "LIST";
+        }
+        if(evaluar(equals,line)){
+            return "EQUALS";
+        }
+        if(evaluar(menor,line)){
+            return "MENOR";
+        }
+        if(evaluar(mayor,line)){
+            return "MAYOR";
         }
         if(evaluar(".*[+\\-*/].*",line)){
             return "ARITMETICA";

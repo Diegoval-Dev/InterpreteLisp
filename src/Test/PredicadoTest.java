@@ -1,5 +1,6 @@
 package Test;
 
+import Model.*;
 import org.junit.jupiter.api.Test;
 
 import java.util.regex.Matcher;
@@ -23,20 +24,33 @@ class PredicadoTest {
             System.out.println("T");
         }
     }
+    @Test
+    void TryAtom(){
+        Atom atom = new Atom();
+        System.out.println(atom.ejecutar("(atom '(+ 2 3)"));
+    }
 
     @Test
     void list() {
+        ListF list = new ListF();
+        System.out.println(list.ejecutar("(list 1 2 3)"));
     }
 
     @Test
     void equals() {
+        Equals equals = new Equals();
+        System.out.println(equals.ejecutar("(equals (gato) 3)"));
     }
 
     @Test
     void menor() {
+        Menor menor = new Menor();
+        System.out.println(menor.ejecutar("(menor 2 1)"));
     }
 
     @Test
     void mayor() {
+        Mayor mayor = new Mayor();
+        System.out.println(mayor.ejecutar("(mayor 4 3)"));
     }
 }

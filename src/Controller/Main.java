@@ -36,10 +36,14 @@ public class Main {
 
     }
     public static ArrayList<AbstractFuncion> interpretar(ArrayList<String> lineas) throws Exception {
-        for (int i = 0; i<lineas.size(); i++) {
-            AbstractFuncion funcion = execute(lineas.get(i));
-            assert funcion != null;
-            System.out.println(funcion.ejecutar(lineas.get(i)));
+        try{
+            for (int i = 0; i<lineas.size(); i++) {
+                AbstractFuncion funcion = execute(lineas.get(i));
+                assert funcion != null;
+                System.out.println(funcion.ejecutar(lineas.get(i)));
+            }
+        }catch (LispException e){
+            ui.print(e.getMessage());
         }
 
         return null;
