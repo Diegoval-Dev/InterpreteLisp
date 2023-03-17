@@ -28,8 +28,6 @@ public class Main {
             lineas.add(linea);
         }
         scanner.close();
-        lineas.add("(defun sum (a b) (+ a b))");
-        lineas.add("(sum 4 5)");
         System.out.println("Interprete LISP");
         interpretar(lineas);
         System.out.println("Se termino");
