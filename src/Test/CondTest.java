@@ -28,7 +28,7 @@ public class CondTest {
         Assert.assertEquals("mayor", resultado);
 
         resultado = Cond.cond("invalido", 5, 3, "mayor", "menor");
-        Assert.assertEquals("Error: comparación inválida", resultado);
+        Assert.assertEquals("Error", resultado);
     }
 
 }

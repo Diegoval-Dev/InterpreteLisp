@@ -7,6 +7,8 @@ import java.util.regex.*;
 
 
 /**
+ * Referencia de: https://stackoverflow.com/questions/33027500/java-how-do-i-code-optional-regex-patterns-with-a-matcher
+ * Referencia de: https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html
  * Clase que detecta si la sintaxis esta mala
  */
 public class Defensiva {
