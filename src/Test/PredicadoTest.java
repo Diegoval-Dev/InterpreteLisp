@@ -33,7 +33,7 @@ class PredicadoTest {
     @Test
     void list() {
         ListF list = new ListF();
-        System.out.println(list.ejecutar("(list 1 2 3)"));
+        System.out.println(list.ejecutar("(list 1 2 3 7 7 6)"));
     }
 
     @Test
@@ -45,7 +45,7 @@ class PredicadoTest {
     @Test
     void menor() {
         Menor menor = new Menor();
-        System.out.println(menor.ejecutar("(menor 2 1)"));
+        System.out.println(menor.ejecutar("(menor 5 7)"));
     }
 
     @Test

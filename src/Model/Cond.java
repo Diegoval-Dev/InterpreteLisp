@@ -56,5 +56,7 @@ public class Cond extends AbstractFuncion{
                 return "Error";
         }
     }
+    public String ejecutar(String line){
 
+    }
 }

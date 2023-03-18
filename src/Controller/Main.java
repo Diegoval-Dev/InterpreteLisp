@@ -29,12 +29,15 @@ public class Main {
         }
         scanner.close();
         System.out.println("Interprete LISP");
+
         interpretar(lineas);
+
         System.out.println("Se termino");
     }
-    public static ArrayList<AbstractFuncion> interpretar(ArrayList<String> lineas) throws Exception {
+    public static void interpretar(ArrayList<String> lineas) throws Exception {
         try{
             for (int i = 0; i<lineas.size(); i++) {
+                System.out.println(searchForVariables(lineas.get(i)));
                 AbstractFuncion funcion = execute(lineas.get(i));
                 assert funcion != null;
                 System.out.println(funcion.ejecutar(lineas.get(i)));
@@ -43,10 +46,8 @@ public class Main {
             ui.print(e.getMessage());
         }
 
-        return null;
     }
     public static AbstractFuncion execute(String line) throws Exception {
-        // String line = ui.readCodigo();
         try {
            return factory.execute(line);
 
@@ -54,6 +55,16 @@ public class Main {
             ui.print(e.getMessage());
         }
         return null;
+    }
+
+    public static String searchForVariables(String line){
+        line = line.replace("(","");
+        line = line.replace(")","");
+        if(localsVariables.containsKey(line)){
+            return String.valueOf(localsVariables.get(line));
+        }else {
+            return "";
+        }
     }
 
 }

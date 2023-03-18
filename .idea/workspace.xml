@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7840b59f-4b94-48a3-9aee-66c3bc079002" name="Changes" comment="Defun funcionando, al parecer hay un error pero no lo encuentro y no afecta el funcionamiento">
-      <change afterPath="$PROJECT_DIR$/src/Model/Atom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Equals.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/ListF.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Mayor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Menor.java" afterDir="false" />
+    <list default="true" id="7840b59f-4b94-48a3-9aee-66c3bc079002" name="Changes" comment="&quot;finalizado&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Factory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Predicado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Predicado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Defun.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Defun.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Test/PredicadoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/PredicadoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,19 +62,16 @@
       <recent name="Test" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PredicadoTest.mayor">
-    <configuration name="PredicadoTest.TryAtom" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Controller.Main" />
       <module name="InterpreteList" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Test.*" />
+          <option name="PATTERN" value="Controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Test" />
-      <option name="MAIN_CLASS_NAME" value="Test.PredicadoTest" />
-      <option name="METHOD_NAME" value="TryAtom" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -150,11 +142,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PredicadoTest.mayor" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.PredicadoTest.menor" />
-        <item itemvalue="JUnit.PredicadoTest.equals" />
         <item itemvalue="JUnit.PredicadoTest.list" />
-        <item itemvalue="JUnit.PredicadoTest.TryAtom" />
+        <item itemvalue="JUnit.PredicadoTest.mayor" />
+        <item itemvalue="JUnit.PredicadoTest.equals" />
       </list>
     </recent_temporary>
   </component>
@@ -173,6 +165,8 @@
       <workItem from="1678637156231" duration="18255000" />
       <workItem from="1679014115987" duration="596000" />
       <workItem from="1679063963974" duration="3923000" />
+      <workItem from="1679105574770" duration="2300000" />
+      <workItem from="1679151096975" duration="2388000" />
     </task>
     <task id="LOCAL-00001" summary="FirstCommit">
       <created>1676145316568</created>
@@ -272,7 +266,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678661763302</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="&quot;finalizado&quot;">
+      <created>1679072851907</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1679072851907</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,6 +305,7 @@
     <MESSAGE value="Funcion quote Funciona al 100" />
     <MESSAGE value="Funcion setq creada, almacenara las variables en un mapa del main" />
     <MESSAGE value="ya medio funciona defun, pero 1, no usa los argumentos obtenidos, 2 no se manda a llamar en un momento dado" />
-    <option name="LAST_COMMIT_MESSAGE" value="ya medio funciona defun, pero 1, no usa los argumentos obtenidos, 2 no se manda a llamar en un momento dado" />
+    <MESSAGE value="&quot;finalizado&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;finalizado&quot;" />
   </component>
 </project>

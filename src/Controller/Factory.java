@@ -42,8 +42,13 @@ public class Factory{
                 String nombreFuncion = arr.remove(0);
                 ArrayList<String> params  = arr;
 
-                Defun def = symbolTable.get(nombreFuncion);
-                def.ejecutarItself(def,params);
+                if(symbolTable.isEmpty()){
+                    System.exit(0);
+                }else{
+                    Defun def = symbolTable.get(nombreFuncion);
+                    def.ejecutarItself(def,params);
+                }
+
 
         }
         return null;

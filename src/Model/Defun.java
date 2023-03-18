@@ -61,7 +61,7 @@ public class Defun extends AbstractFuncion{
         }
         ArrayList<String> s = new ArrayList<>();
         s.add(correctLine);
-        System.out.println(correctLine);
         Main.interpretar(s);
+        System.exit(0);
     }
 }
