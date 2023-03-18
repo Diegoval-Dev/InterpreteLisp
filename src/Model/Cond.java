@@ -16,47 +16,49 @@ public class Cond extends AbstractFuncion{
      * @param comparacion compara la operacion aritmetica
      * @param a entero representativo del primer valor en comparar
      * @param b entero representativo del segundo valor en comparar
-     * @param mayor devuelve si a es mayor que b
-     * @param menor devuelve si a es menor que b
      * @return retorna un objeto String
      */
-    public static String cond(String comparacion, int a, int b, String mayor, String menor) {
+    public static String cond(String comparacion, int a, int b) {
         switch(comparacion) {
             case ">":
                 if (a > b) {
-                    return mayor;
+                    return "mayor";
                 } else {
-                    return menor;
+                    return "menor";
                 }
             case "<":
                 if (a < b) {
-                    return mayor;
+                    return "mayor";
                 } else {
-                    return menor;
+                    return "menor";
                 }
             case ">=":
                 if (a >= b) {
-                    return mayor;
+                    return "mayor";
                 } else {
-                    return menor;
+                    return "menor";
                 }
             case "<=":
                 if (a <= b) {
-                    return mayor;
+                    return "mayor";
                 } else {
-                    return menor;
+                    return "menor";
                 }
             case "=":
                 if (a == b) {
-                    return mayor;
+                    return "mayor";
                 } else {
-                    return menor;
+                    return "menor";
                 }
             default:
                 return "Error";
         }
     }
     public String ejecutar(String line){
-
+        String example = "(cond > 5 3)";
+        line = line.substring(1, line.length()-1);
+        line = line.replace("cond ","");
+        String[] things = line.split(" ");
+        return cond(things[0],Integer.parseInt(things[1]),Integer.parseInt(things[2]));
     }
 }

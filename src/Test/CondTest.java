@@ -12,22 +12,23 @@ public class CondTest {
 
     @Test
     public void testCond() {
-        String resultado = Cond.cond(">", 5, 3, "mayor", "menor");
+        Cond cond = new Cond();
+        String resultado = cond.ejecutar("(cond > 5 3)");
         Assert.assertEquals("mayor", resultado);
 
-        resultado = Cond.cond("<", 5, 3, "mayor", "menor");
+        resultado = cond.ejecutar("(cond < 5 3)");
         Assert.assertEquals("menor", resultado);
 
-        resultado = Cond.cond("=", 5, 3, "mayor", "menor");
+        resultado = cond.ejecutar("(cond = 5 3)");
         Assert.assertEquals("menor", resultado);
 
-        resultado = Cond.cond(">=", 5, 5, "mayor", "menor");
+        resultado = cond.ejecutar("(cond >= 5 3)");
         Assert.assertEquals("mayor", resultado);
 
-        resultado = Cond.cond("<=", 5, 5, "mayor", "menor");
-        Assert.assertEquals("mayor", resultado);
+        resultado = cond.ejecutar("(cond <= 5 3)");
+        Assert.assertEquals("menor", resultado);
 
-        resultado = Cond.cond("invalido", 5, 3, "mayor", "menor");
+        resultado = cond.ejecutar("(cond invalido 5 3)");
         Assert.assertEquals("Error", resultado);
     }
 
