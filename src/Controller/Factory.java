@@ -11,6 +11,12 @@ import java.util.regex.Pattern;
 import static Controller.Main.symbolTable;
 
 public class Factory{
+    /**
+     *
+     * @param line determina qué función de Lisp debe ejecutar el programa, ya sea una función predefinida o una función definida por el usuario
+     * @return valor nulo al no coincidir en alguna función
+     * @throws Exception generar una excepción de tipo "Exception"
+     */
     public AbstractFuncion execute(String line) throws Exception{
         String function = KnowFunction(line);
         switch (function){
@@ -53,6 +59,12 @@ public class Factory{
         }
         return null;
     }
+
+    /**
+     *
+     * @param line determinar qué función de Lisp se está utilizando
+     * @return regresa el nombre de esa función como una cadena
+     */
     public String KnowFunction(String line){
         String nameFunction = "";
         String quote = ".*\\bquote\\b.*";
@@ -99,6 +111,13 @@ public class Factory{
         return nameFunction;
         }
     }
+
+    /**
+     *
+     * @param regex cadena de texto que representa una expresión regular
+     * @param expresion cadena de texto que contiene la expresión que se va a evaluar
+     * @return regresa un valor booleano que indica si se encontró una coincidencia entre la expresión regular y la cadena de texto "expresion"
+     */
     private static boolean evaluar(String regex, String expresion) {
         Pattern pattern = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(expresion);
