@@ -1,9 +1,7 @@
 package Test;
 
 import org.junit.jupiter.api.Test;
-
 import java.util.ArrayList;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class QuoteTest {
@@ -17,9 +15,12 @@ class QuoteTest {
         t = t.replace(")","");
         ArrayList<String> arrT = new ArrayList<>();
         for(int i = 0; i < t.length(); i++){
-            String caracter = String.valueOf( t.charAt(i));
-            arrT.add(caracter);
+            String caracter = String.valueOf(t.charAt(i));
+            if(!caracter.equals(" ")) {
+                arrT.add(caracter);
+            }
         }
-        System.out.println(arrT);
+        String[] expected = {"+", "2", "2", "A", "2"};
+        assertArrayEquals(expected, arrT.toArray(new String[0]));
     }
 }

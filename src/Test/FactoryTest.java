@@ -1,13 +1,9 @@
 package Test;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
-
-import javax.swing.*;
-import java.sql.SQLOutput;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class FactoryTest {
 
@@ -18,12 +14,8 @@ class FactoryTest {
     @Test
     void knowFunction() {
         String line = "(+ 1 9)";
-        String regexAritmetica = "[^(][0-9][)$]";
-        if (evaluar(regexAritmetica,line)){
-            System.out.println("SI");
-        }else{
-            System.out.println("NO");
-        }
+        String regexAritmetica = "\\([+*/-]\\s[0-9]+\\s[0-9]+\\)";
+        assertTrue(evaluar(regexAritmetica,line));
     }
     private static boolean evaluar(String regex, String expresion) {
         Pattern pattern = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);

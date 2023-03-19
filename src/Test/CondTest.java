@@ -3,11 +3,6 @@ import org.junit.Assert;
 import org.junit.Test;
 import Model.Cond;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 public class CondTest {
 
     @Test

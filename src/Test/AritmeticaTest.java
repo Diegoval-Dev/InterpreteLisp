@@ -1,10 +1,12 @@
 package Test;
 
 import java.util.Stack;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class AritmeticaTest {
 
-    @org.junit.jupiter.api.Test
+    @Test
     void control() {
         String expresion = "(+ (+ (+ 1 1) 2) 6)";
         Stack<Integer> numeros = new Stack<>();
@@ -49,15 +51,18 @@ class AritmeticaTest {
                     break;
             }
         }
-        System.out.println(numeros.pop());
+        assertEquals(10, numeros.pop());
 
     }
 
-    @org.junit.jupiter.api.Test
-    String deleteParentesis(String expresion) {
+    @Test
+    void deleteParentesis() {
+        String expresion = "(+ (+ (+ 1 1) 2) 6)";
         expresion = expresion.replace("(","");
         expresion = expresion.replace(")","");
         expresion = expresion.replace(" ", "");
-        return expresion;
+        assertEquals("+++1126", expresion);
     }
+
+
 }

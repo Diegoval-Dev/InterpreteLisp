@@ -1,10 +1,7 @@
 package Test;
 
 import Model.Defensiva;
-
 import org.junit.Test;
-import static Model.Defensiva.sinLetras;
-import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class DefensivaTest {
@@ -16,7 +13,6 @@ public class DefensivaTest {
         System.out.println("La expresión '" + expression + "' es " + (result ? "válida" : "inválida"));
     }
 
-
     @Test
     public void testExpresionAritmeticaValida() {
         String expression2 = "(+ (+1  5) 5)";
@@ -24,7 +20,4 @@ public class DefensivaTest {
         assertTrue(result2);
         System.out.println("La expresión '" + expression2 + "' es " + (result2 ? "válida" : "inválida"));
     }
-
-
-
 }
