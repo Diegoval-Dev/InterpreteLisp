@@ -4,6 +4,10 @@ import Controller.Main;
 
 public class SetQ extends AbstractFuncion{
 
+    /**
+     * @param line recibe una linea de codigo
+     * @return regresa una cadena que indica el nombre y valor de la variable creada
+     */
     public String ejecutar(String line) {
         line = line.replace("(", "");
         line = line.replace(")","");

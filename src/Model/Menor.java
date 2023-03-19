@@ -1,6 +1,10 @@
 package Model;
 
 public class Menor extends AbstractFuncion{
+    /**
+     * @param line recibe una linea de codigo
+     * @return regresa un valor booleano, donde indica si el primer numero en la cadena es menor que el segundo numero
+     */
     public String ejecutar(String line){
         String x;
         String y;

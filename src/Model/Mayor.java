@@ -1,6 +1,10 @@
 package Model;
 
 public class Mayor extends AbstractFuncion{
+    /**
+     * @param line recibe una linea de codigo
+     * @return regresa true si x es mayor que y, de lo contrario, devuelve false
+     */
     public String ejecutar(String line){
         String x;
         String y;
