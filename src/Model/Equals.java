@@ -1,6 +1,10 @@
 package Model;
 
 public class Equals extends AbstractFuncion{
+    /**
+     * @param line recibe una linea de codigo
+     * @return regresa un String que indica si los dos parámetros son iguales
+     */
     public String ejecutar(String line){
         String x;
         String y;

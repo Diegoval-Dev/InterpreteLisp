@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7840b59f-4b94-48a3-9aee-66c3bc079002" name="Changes" comment="Defun funcionando, al parecer hay un error pero no lo encuentro y no afecta el funcionamiento">
+    <list default="true" id="7840b59f-4b94-48a3-9aee-66c3bc079002" name="Changes" comment="Comentarios en Controller">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Factory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/AbstractFuncion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/AbstractFuncion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Aritmetica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Aritmetica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Atom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Atom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Cond.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Cond.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Defensiva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Defensiva.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Defun.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Defun.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,8 +64,8 @@
       <recent name="Test" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PredicadoTest.mayor">
-    <configuration name="PredicadoTest.TryAtom" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.FactoryTest.execute">
+    <configuration name="FactoryTest.execute" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="InterpreteList" />
       <extension name="coverage">
         <pattern>
@@ -70,8 +74,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Test" />
-      <option name="MAIN_CLASS_NAME" value="Test.PredicadoTest" />
-      <option name="METHOD_NAME" value="TryAtom" />
+      <option name="MAIN_CLASS_NAME" value="Test.FactoryTest" />
+      <option name="METHOD_NAME" value="execute" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -143,11 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FactoryTest.execute" />
         <item itemvalue="JUnit.PredicadoTest.mayor" />
         <item itemvalue="JUnit.PredicadoTest.menor" />
         <item itemvalue="JUnit.PredicadoTest.equals" />
         <item itemvalue="JUnit.PredicadoTest.list" />
-        <item itemvalue="JUnit.PredicadoTest.TryAtom" />
       </list>
     </recent_temporary>
   </component>
@@ -265,7 +269,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678661763302</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Comentarios en Controller">
+      <created>1679178641852</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1679178641852</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,6 +308,7 @@
     <MESSAGE value="Funcion quote Funciona al 100" />
     <MESSAGE value="Funcion setq creada, almacenara las variables en un mapa del main" />
     <MESSAGE value="ya medio funciona defun, pero 1, no usa los argumentos obtenidos, 2 no se manda a llamar en un momento dado" />
-    <option name="LAST_COMMIT_MESSAGE" value="ya medio funciona defun, pero 1, no usa los argumentos obtenidos, 2 no se manda a llamar en un momento dado" />
+    <MESSAGE value="Comentarios en Controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="Comentarios en Controller" />
   </component>
 </project>

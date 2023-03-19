@@ -5,6 +5,10 @@ import java.util.Stack;
 public class Aritmetica extends AbstractFuncion{
     Stack<Integer> stack = new Stack<Integer>();
 
+    /**
+     * @param expresion expresión aritmética en notación polaca inversa
+     * @return regresa el resultado de dicha expresión como un entero
+     */
     public int Control(String expresion){
         Stack<Integer> numeros = new Stack<>();
         Stack<String> operadores = new Stack<>();
@@ -50,6 +54,11 @@ public class Aritmetica extends AbstractFuncion{
         }
         return numeros.pop();
     }
+
+    /**
+     * @param line recibe una linea de codigo
+     * @return regresa el resultado como una cadena de texto
+     */
     public String ejecutar(String line){
         return (String.valueOf(Control(line)));
     }

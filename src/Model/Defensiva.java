@@ -12,6 +12,11 @@ import java.util.regex.*;
  * Clase que detecta si la sintaxis esta mala
  */
 public class Defensiva {
+    /**
+     * Verifica si los paréntesis de la expresión están correctamente emparejados y balanceados
+     * @param expression expresion aritmrtica representada en cadena de texto
+     * @return regresa true si los paréntesis están balanceados y false en caso contrario.
+     */
     public static boolean funcionValid(String expression) {
         Stack<Character> stackFun = new Stack<>();
 
@@ -33,8 +38,8 @@ public class Defensiva {
     /**
      * Expresión regular encargada de permitir solo números y operadores aritméticos
      * donde el objeto matcherCompro comprueba que la expresion anterior coincida con las especificaciones de patron
-     * @param expresion2
-     * @return
+     * @param expresion2 cadena de texto
+     * @return regresa true si la cadena cumple con esta condición y false si no la cumple
      */
     public static boolean sinLetras(String expresion2) {
 

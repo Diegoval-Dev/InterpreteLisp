@@ -12,7 +12,6 @@ import java.lang.Object;
 public class Cond extends AbstractFuncion{
 
     /**
-     *
      * @param comparacion compara la operacion aritmetica
      * @param a entero representativo del primer valor en comparar
      * @param b entero representativo del segundo valor en comparar
@@ -54,6 +53,11 @@ public class Cond extends AbstractFuncion{
                 return "Error";
         }
     }
+
+    /**
+     * @param line recibe una linea de codigo
+     * @return regresa una cadena de texto con el resultao
+     */
     public String ejecutar(String line){
         String example = "(cond > 5 3)";
         line = line.substring(1, line.length()-1);
